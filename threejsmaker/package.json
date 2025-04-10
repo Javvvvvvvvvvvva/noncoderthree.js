@@ -1,17 +1,17 @@
 {
-  "name": "threejs-journey-exercise",
+  "name": "threejs-no-code-builder",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
-  },
-  "devDependencies": {
-    "vite": "^6.2.2",
-    "vite-plugin-restart": "^0.4.2"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.2"
   }
 }

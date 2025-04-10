@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three.js No-Code Builder</title>
+  <script type="module" crossorigin src="/assets/index-ACwf_IeM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BfB5ue2t.css">
+</head>
+<body>
+  <!-- Welcome Popup Modal -->
+  <div id="welcomePopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">&times;</span>
+      <h2>Welcome to Three.js Maker!</h2>
+      <p>Here you can create 3D objects and generate the code to use in your own projects.</p>
+      <p>Steps to get started:</p>
+      <ul>
+        <li>Select a shape from the dropdown.</li>
+        <li>Click on the scene to place your shape.</li>
+        <li>Edit the generated code and run it to see your shapes appear!</li>
+        <li>Keypoint! Remove = Right-click</li>
+      </ul>
+      <button id="gotItBtn">Got it!</button>
+    </div>
+  </div>
+
+    <div id="ui">
+        <div id="shapeSelectorContainer">
+            <label id="shapeSelectorLabel" for="shapeSelector">Select a Shape</label>
+            <select id="shapeSelector">
+              <option value="box">Box</option>
+              <option value="sphere">Sphere</option>
+              <option value="cylinder">Cylinder</option>
+              <option value="torusknot">Torus Knot</option>
+            </select>
+          </div>
+          
+        <button id="addBoxBtn">+ Add Shape</button>
+        <button id="helpBtn">? Help</button>
+        <button id="downloadBtn">⬇ Download Code</button>
+
+        <div id="codePanel">
+          <h3>Generated Code:</h3>
+          <textarea id="codeInput">// Your code will appear here...</textarea>
+            <button id="runCodeBtn">▶ Run Code</button>
+        </div>
+      </div>
+      
+  </div>
+  <div id="helpPopup" class="popup">
+    <div class="popup-content">
+      <span id="closeHelp" class="close-btn">&times;</span>
+      <h2>Generated Code Explained 💡</h2>
+      <pre style="text-align: left; font-size: 14px;">
+  mesh.geometry = new THREE.BoxGeometry(1, 1, 1);
+  // Defines the shape type and its dimensions
+  
+  mesh.material.color.set(0xff88aa);
+  // Sets the color of the shape (hex code)
+  
+  mesh.position.set(x, y, z);
+  // Controls where the shape appears in the scene
+  
+  mesh.scale.set(x, y, z);
+  // Adjusts the size in each direction
+      </pre>
+    </div>
+  </div>
+  
+  <canvas class="webgl"></canvas>
+</body>
+</html>

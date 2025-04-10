@@ -1,10 +1,10 @@
 import restart from 'vite-plugin-restart'
 
 export default {
-    root: './', // Sources files (typically where index.html is)
+    root: './', 
     server:
     {
-        host: true, // Open to local network and display URL
+        host: true, 
         open: !('SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env) // Open if it's not a CodeSandbox
     },
     build:
